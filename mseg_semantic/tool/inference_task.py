@@ -395,7 +395,7 @@ class InferenceTask:
         prediction = torch.argmax(prediction, axis=2)
         prediction = prediction.data.cpu().numpy()
         gray_img = np.uint8(prediction)
-	print(gray_img)
+	    print(gray_img)
 
 	
         return gray_img
