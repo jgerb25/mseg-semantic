@@ -395,6 +395,10 @@ class InferenceTask:
         prediction = torch.argmax(prediction, axis=2)
         prediction = prediction.data.cpu().numpy()
         gray_img = np.uint8(prediction)
+
+	print(gray_img)
+
+	
         return gray_img
 
     def execute_on_video(self, max_num_frames: int = 5000, min_resolution: int = 1080) -> None:
